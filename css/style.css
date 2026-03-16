@@ -639,13 +639,14 @@ bootstrap.min.css
 }
 
 #contact .section-heading {
-	margin-bottom: 60px;
+	margin-bottom: 44px;
 }
 
 #contact {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
+	padding: 78px 0;
 }
 
 #contact::before {
@@ -674,41 +675,175 @@ bootstrap.min.css
 	z-index: 1;
 }
 
+#contact .contact-layout {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+
+#contact .contact-layout > [class*="col-"] {
+	margin-bottom: 24px;
+}
+
+#contact .contact-column {
+	display: flex;
+	flex-direction: column;
+}
+
+#contact .contact-card {
+	background: rgba(8, 23, 33, 0.62);
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+	padding: 22px;
+	backdrop-filter: blur(6px);
+}
+
+#contact .contact-card + .contact-card {
+	margin-top: 18px;
+}
+
+#contact .contact-card--info {
+	padding: 16px 18px;
+}
+
+#contact .contact-card--gatherings {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact .contact-card--form {
+	flex: 1;
+}
+
+#contact .contact-block + .contact-block {
+	margin-top: 28px;
+	padding-top: 24px;
+	border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#contact .contact-block h5 {
+	margin: 0 0 12px;
+	font-size: 17px;
+	font-weight: 700;
+	letter-spacing: 0.4px;
+	color: #fff;
+}
+
+#contact .contact-block p,
+#contact .contact-form-copy {
+	font-size: 15px;
+	line-height: 1.7;
+	color: rgba(255, 255, 255, 0.88);
+}
+
+#contact .contact-form-copy {
+	margin: 0 0 18px;
+}
+
+#contact .contact-details {
+	display: grid;
+	gap: 10px;
+}
+
+#contact .contact-detail {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 12px;
+	background-color: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	color: #fff;
+	text-decoration: none;
+}
+
+#contact .contact-detail i {
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	text-align: center;
+	font-size: 15px;
+	background: rgba(var(--primary-color-rgb), 0.92);
+	color: #fff;
+}
+
+#contact .contact-detail span {
+	display: block;
+	margin-bottom: 4px;
+	font-size: 12px;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.68);
+}
+
+#contact .contact-detail strong {
+	display: block;
+	font-size: 15px;
+	line-height: 1.35;
+	color: #fff;
+}
+
+#contact .contact-detail:hover,
+#contact .contact-detail:focus {
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+#contact .contact-detail--static {
+	margin-bottom: 14px;
+}
+
+#contact .contact-card--gatherings .map {
+	margin-top: 16px;
+	padding-top: 0;
+	flex: 1;
+	min-height: 0;
+	display: flex;
+}
+
 #contact .map iframe {
 	width: 100%;
-	min-height: 320px;
+	min-height: 260px;
 	border: 0;
 	overflow: hidden;
+}
+
+#contact .contact-card--gatherings .map iframe {
+	flex: 1;
+	height: 100%;
 }
 
 #contact input {
 	border-radius: 0px;
 	padding-left: 15px;
-	font-size: 13px;
+	font-size: 14px;
 	color: var(--dark-color);
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.96);
 	outline: none;
 	border: none;
 	box-shadow: none;
 	line-height: 50px;
 	height: 50px;
 	width: 100%;
-	margin-bottom: 30px;
+	margin-bottom: 18px;
 }
 
 #contact textarea {
 	border-radius: 0px;
 	padding-left: 15px;
-	font-size: 13px;
+	padding-top: 14px;
+	font-size: 14px;
 	color: var(--dark-color);
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.96);
 	outline: none;
 	border: none;
 	box-shadow: none;
 	height: 165px;
 	max-height: 220px;
 	width: 100%;
-	margin-bottom: 25px;
+	margin-bottom: 18px;
 }
 
 #contact input::placeholder, #contact textarea::placeholder {
@@ -719,7 +854,7 @@ bootstrap.min.css
 #contact button {
 	display: inline-block;
 	background-color: var(--primary-color);
-	padding: 12px 18px;
+	padding: 13px 24px;
 	color: #fff;
 	font-size: 11px;
 	letter-spacing: 1px;
@@ -1097,5 +1232,31 @@ body.lb-disable-scrolling {
 	}
 	.about-entry h5 {
 		font-size: 23px;
+	}
+	#contact {
+		padding: 64px 0;
+	}
+	#contact .section-heading {
+		margin-bottom: 36px;
+	}
+	#contact .contact-block p,
+	#contact .contact-form-copy {
+		font-size: 15px;
+		line-height: 1.75;
+	}
+	#contact .contact-card {
+		padding: 18px 16px;
+	}
+	#contact .contact-card--info {
+		padding: 16px;
+	}
+	#contact .contact-detail {
+		align-items: flex-start;
+	}
+	#contact .contact-detail strong {
+		font-size: 15px;
+	}
+	#contact .map iframe {
+		min-height: 220px;
 	}
 }

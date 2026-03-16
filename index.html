@@ -49,13 +49,27 @@
             "image": "https://hriscani7dana.org/img/share-image.png",
             "description": "Lokalna hrišćanska zajednica posvećena Svetom pismu, ličnom odnosu sa Bogom i zajedništvu.",
             "email": "mailto:chsdperlez@gmail.com",
-            "telephone": "+381607373866",
+            "telephone": "+381691726375",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Banatska 85",
+                "addressLocality": "Perlez",
+                "addressCountry": "RS"
+            },
             "hasMap": "https://www.google.com/maps?q=45.2035541,20.3841268&z=13&output=embed",
             "geo": {
                 "@type": "GeoCoordinates",
                 "latitude": 45.2035541,
                 "longitude": 20.3841268
             },
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "https://schema.org/Saturday",
+                    "opens": "09:30",
+                    "closes": "14:00"
+                }
+            ],
             "sameAs": [
                 "https://www.facebook.com/groups/1423116207930404/",
                 "https://www.instagram.com/hriscani_sedmog_dana",
@@ -434,10 +448,10 @@
                         <div class="col-md-3 col-sm-6 project-item">
                             <div class="thumb">
                                 <div class="image">
-                                    <img src="img/gallery_00.jpg">
+                                    <img src="img/gallery_07.jpg">
                                 </div>
                                 <div class="hover-effect">
-                                    <a href="img/gallery_big_00.jpg" data-lightbox="image-1"><i
+                                    <a href="img/gallery_big_07.jpg" data-lightbox="image-1"><i
                                             class="fa fa-search"></i></a>
                                 </div>
                             </div>
@@ -458,41 +472,83 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="map">
-                        <iframe src="https://www.google.com/maps?q=45.2035541,20.3841268&z=13&output=embed"
-                            title="Crkva Hrišćana Sedmog Dana" loading="lazy" allowfullscreen
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="row contact-layout">
+                <div class="col-md-6 contact-column contact-column--left">
+                    <div class="contact-card contact-card--gatherings">
+                        <div class="contact-block">
+                            <h5>Okupljanja</h5>
+                            <div class="contact-detail contact-detail--static">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <div>
+                                    <span>Adresa</span>
+                                    <strong>Banatska 85, Perlez</strong>
+                                </div>
+                            </div>
+                            <p>Okupljamo se svake subote u 9:30. Subotom postoje i popodnevna okupljanja po dogovoru,
+                                a i drugim danima susreti se organizuju po dogovoru.</p>
+                            <p>Lepim duhovnim pesmama o Bogu obogaćujemo program i zajedništvo naših okupljanja.</p>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps?q=45.2035541,20.3841268&z=13&output=embed"
+                                title="Crkva Hrišćana Sedmog Dana" loading="lazy" allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <form id="contact-form" action="" method="post">
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <input name="name" type="text" class="form-control" id="name"
-                                        placeholder="Vaše ime..." required="">
-                                </fieldset>
+                <div class="col-md-6 contact-column">
+                    <div class="contact-card contact-card--info">
+                        <div class="contact-block">
+                            <h5>Kontakt podaci</h5>
+                            <div class="contact-details">
+                                <a href="tel:+381691726375" class="contact-detail">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <div>
+                                        <span>Telefon</span>
+                                        <strong>+381 69 172 6375</strong>
+                                    </div>
+                                </a>
+                                <a href="mailto:chsdperlez@gmail.com" class="contact-detail">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <div>
+                                        <span>Email</span>
+                                        <strong>chsdperlez@gmail.com</strong>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <input name="email" type="email" class="form-control" id="email"
-                                        placeholder="Vaš email..." required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message"
-                                        placeholder="Vaša poruka..." required=""></textarea>
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <button type="submit" id="form-submit" class="btn">Pošalji Poruku</button>
-                                </fieldset>
-                            </div>
-                        </form>
+                        </div>
+                    </div>
+                    <div class="contact-card contact-card--form">
+                        <p class="contact-form-copy">Ako imate duhovnu ili materijalnu potrebu, želite da se molimo za
+                            vas ili imate bilo kakvo pitanje, slobodno nam pišite. Biće nam
+                            drago da vas saslušamo i, u skladu sa svojim mogućnostima, pružimo podršku, molitvu i
+                            odgovor.</p>
+                        <div class="row">
+                            <form id="contact-form" action="" method="post">
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name"
+                                            placeholder="Vaše ime..." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="email" type="email" class="form-control" id="email"
+                                            placeholder="Vaš email..." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" class="form-control" id="message"
+                                            placeholder="Vaša poruka..." required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="btn">Pošalji Poruku</button>
+                                    </fieldset>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
